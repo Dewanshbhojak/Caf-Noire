@@ -29,7 +29,7 @@ const about = () => {
 
         <h2 className='text-5xl text-[#ffdd] font-extrabold py-10'>Beans To cup</h2>
         
-        <div className='flex justify-between py-10'>
+        <div className='flex justify-between py-9'>
           <div className=' w-100 h-100  text-5xl border-5 rounded-full bg-[url(/image/about.jpg)] bg-cover bg-center  ml-20 bg-fixed bg-no-repeat shadow-2xl'>  </div>
           <p className=" flex w-3xl m-10 px-10 py-10 mt-5 text-[#ffdd]  rounded-3xl  shadow-2xl text-lg">
         Coffee making starts with fresh beans, which are carefully roasted to bring out their aroma and flavor. The roasted beans are then ground to the right consistency, depending on the brewing method.
