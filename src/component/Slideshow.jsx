@@ -4,7 +4,7 @@ const Slideshow = () => {
   const slides = [
     "/image/slideshow1.png",
     "/image/coffee.io-background.jpg",
-     "/image/slideshow2.jpg"
+     "/image/Slideshow2.jpg"
   ];
 
   const [current, setCurrent] = useState(0);
