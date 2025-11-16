@@ -8,7 +8,7 @@ const hero = () => {
   return (
     <div className=' h-full bg-[#4B3832] '>
       <Navbar />
-      <section id="home" className="flex h-3xl flex-col md:flex-row items-center  bg-[url(image/coffeeimage.jpg)] bg-cover bg-center  justify-between px-10  ">
+      <section id="home" className="flex h-3xl flex-col md:flex-row items-center  bg-[url(/image/coffeeimage.jpg)] bg-cover bg-center  justify-between px-10  ">
 
         <motion.div
           initial={{ opacity: 0, x: -50 }}

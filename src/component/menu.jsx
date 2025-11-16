@@ -7,9 +7,9 @@ const menu = () => {
         <h2 className="text-6xl font-extrabold text-center text-[#ffdd] underline decoration-2 mb-12 text">Popular Drink</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-bold">
           {[
-            { name: "Espresso", price: "$3.50", img: "./image/espresso.jpg" },
+            { name: "Espresso", price: "$3.50", img: "/image/espresso.jpg" },
             { name: "Cappuccino", price: "$4.00", img: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=500&q=80" },
-            { name: "Latte", price: "$4.50", img: "./image/latte.jpg" },
+            { name: "Latte", price: "$4.50", img: "/image/latte.jpg" },
             
           ].map((item, i) => (
             <motion.div 
