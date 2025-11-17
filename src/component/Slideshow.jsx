@@ -4,7 +4,7 @@ const Slideshow = () => {
   const slides = [
     "/image/slideshow1.png",
     "/image/coffee.io-background.jpg",
-     "/image/Slideshow2.jpg"
+    "/image/Slideshow2.jpg"
   ];
 
   const [current, setCurrent] = useState(0);
@@ -15,24 +15,23 @@ const Slideshow = () => {
       setCurrent(prev => (prev + 1) % slides.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   return (
-    <div className="  rounded-xl shadow-lg">
-      
-    
+    <div className="relative rounded-xl shadow-lg overflow-hidden">
+
+      {/* Slide */}
       <div
-      className="h-[600px] w-full  bg-cover bg-center bg-no-repeat bg-fixed"
-      style={{ backgroundImage: `url(${slides[current]})` }}
-    >
-      {/* Content here */}
-    </div>
-     
+        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-cover bg-center bg-no-repeat transition-all duration-700"
+        style={{ backgroundImage: `url(${slides[current]})` }}
+      ></div>
 
       {/* Left Button */}
       <button
-        onClick={() => setCurrent((current - 1 + slides.length) % slides.length)}
-        className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full"
+        onClick={() =>
+          setCurrent((current - 1 + slides.length) % slides.length)
+        }
+        className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full"
       >
         ‹
       </button>
@@ -40,7 +39,7 @@ const Slideshow = () => {
       {/* Right Button */}
       <button
         onClick={() => setCurrent((current + 1) % slides.length)}
-        className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full"
+        className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full"
       >
         ›
       </button>
@@ -52,7 +51,7 @@ const Slideshow = () => {
             key={index}
             onClick={() => setCurrent(index)}
             className={`w-3 h-3 rounded-full cursor-pointer transition-all ${
-              current === index ? "bg-white" : "bg-white/40"
+              current === index ? "bg-white scale-110" : "bg-white/40"
             }`}
           ></div>
         ))}
@@ -61,4 +60,4 @@ const Slideshow = () => {
   );
 };
 
-export default Slideshow;
+export default Slideshow

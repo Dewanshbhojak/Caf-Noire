@@ -1,77 +1,84 @@
-import React from 'react'
-import Navbar from './navbar'
-import Slideshow from './Slideshow'
+import React from "react";
+import Navbar from "./navbar";
+import Slideshow from "./Slideshow";
 
 const Items = () => {
   return (
-    <div className='bg-[#3B2F2F]'>
+    <div className="bg-[#3B2F2F] min-h-screen">
       <Navbar />
-      <Slideshow/>
-      
+      <Slideshow />
 
-     
+      <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#ffdd] font-extrabold text-center py-12 underline decoration-4">
+        Our Menu
+      </p>
 
-         <p className='text-7xl text-[#ffdd] font-extrabold text-center py-10 underline decoration-4'> Our Menu</p>
-
-<ul className='grid grid-cols-3 '>
-  <li className='py-10 px-10 hover:shadow-2xl rounded-4xl'>
-      
-    <div className=' w-100 h-100  border-amber-50 text-center bg-[url(/image/coffee.png)]  bg-center bg-cover  mb-5 rounded-t-2xl'>
-          </div>
-          <div className=' w-100 h-10 rounded-b-3xl text-center font-bold text-[#ffdd] text-3xl'> Espresso</div>
-          <div className='font-serif text-xl w-100 h-10 text-center text-[#ffdd] '>Wide range of Steaming hot coffee to make you fresh and light</div>
-  </li>
-   <li className='py-10 px-10 hover:shadow-2xl rounded-4xl'>
-    <div className=' w-100 h-100  border-amber-50 text-center bg-[url(/image/cold_coffee.png)]  bg-center bg-cover  mb-5 rounded-t-2xl'>
-          </div>
-          <div className=' w-100 h-10 rounded-b-3xl text-center font-bold text-[#ffdd] text-3xl'> Cold Coffee</div>
-          <div className='font-serif text-xl w-100 h-10 text-center text-[#ffdd] '>Wide range of Steaming hot coffee to make you fresh and light</div>
-          
-  </li>
-   <li className='py-10 px-10 hover:shadow-2xl rounded-4xl '>
-    <div className=' w-100 h-100  border-amber-50 text-center bg-[url(/image/lattes.png)]  bg-center bg-cover rounded-t-2xl'>
-          </div>
-             <div className=' w-100 h-10 rounded-b-3xl text-center font-bold text-[#ffdd] text-3xl'> Latte</div>
-          <div className='font-serif text-xl w-100 h-10 text-center text-[#ffdd] '>Wide range of Steaming hot coffee to make you fresh and light</div>
-  </li>
-   <li className='py-10 px-10 hover:shadow-2xl rounded-4xl'>
-    <div className=' w-100 h-110  border-amber-50 text-center bg-[url(/image/javachipfrappe.png)]  bg-center bg-cover rounded-t-2xl'>
-          </div>
-          <div className=' w-100 h-10 rounded-b-3xl text-center font-bold text-[#ffdd] text-3xl'> Java chip Frappe </div>
-          <div className='font-serif text-xl w-100 h-10 text-center text-[#ffdd] '>Wide range of Steaming hot coffee to make you fresh and light</div>
-  </li>
-    <li className='py-10 px-10 hover:shadow-2xl rounded-4xl'>
-    <div className=' w-100 h-110  border-amber-50 text-center bg-[url(/image/Americano.png)]  bg-center bg-cover rounded-t-2xl'>
-          </div>
-          <div className=' w-100 h-10 rounded-b-3xl text-center font-bold text-[#ffdd] text-3xl'> Americano </div>
-          <div className='font-serif text-xl w-100 h-10 text-center text-[#ffdd]'>Wide range of Steaming hot coffee to make you fresh and light</div>
-  </li>
-    <li className='py-10 px-10 hover:shadow-2xl rounded-4xl'>
-    <div className=' w-100 h-100  border-amber-50 text-center bg-[url(/image/Crossiant.png)]  bg-center bg-cover rounded-t-2xl'>
-          </div>
-          <div className=' w-100 h-10 rounded-b-3xl text-center font-bold text-[#ffdd] text-3xl'> Crossiant </div>
-          <div className='font-serif text-xl w-100 h-10 text-center '>Wide range of Steaming hot coffee to make you fresh and light</div>
-  </li>
     
-    <li className='py-10 px-10 hover:shadow-2xl rounded-4xl'>
-    <div className=' w-100 h-110  border-amber-50 text-center bg-[url(/image/blueberry.png)]  bg-center bg-cover rounded-t-2xl'>
-          </div>
-          <div className=' w-100 h-10 rounded-b-3xl text-center font-bold text-[#ffdd] text-3xl'> Blue Berry</div>
-          <div className='font-serif text-xl w-100 h-10 text-center text-[#ffdd]'>Wide range of Steaming hot coffee to make you fresh and light</div>
-  </li>
-  
-  
- 
-</ul>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 sm:px-10 pb-20">
+        
+        {/* Item Card */}
+        <li className="p-6 rounded-3xl shadow-xl hover:shadow-2xl transition">
+          <div className="w-full h-60 bg-[url('/image/coffee.png')] bg-center bg-cover rounded-t-2xl mb-4"></div>
+          <h3 className="text-center font-bold text-[#ffdd] text-3xl">Espresso</h3>
+          <p className="font-serif text-lg text-center text-[#ffdd] px-2 mt-2">
+            Wide range of steaming hot coffee to make you feel fresh.
+          </p>
+        </li>
 
-   <footer className="px-10 py-6 text-center border-t bg-stone-800 border-[#ffdd] text-gray-400">
+        <li className="p-6 rounded-3xl shadow-xl hover:shadow-2xl transition">
+          <div className="w-full h-60 bg-[url('/image/cold_coffee.png')] bg-center bg-cover rounded-t-2xl mb-4"></div>
+          <h3 className="text-center font-bold text-[#ffdd] text-3xl">Cold Coffee</h3>
+          <p className="font-serif text-lg text-center text-[#ffdd] px-2 mt-2">
+            Enjoy a chilled and refreshing coffee experience.
+          </p>
+        </li>
+
+        <li className="p-6 rounded-3xl shadow-xl hover:shadow-2xl transition">
+          <div className="w-full h-60 bg-[url('/image/lattes.png')] bg-center bg-cover rounded-t-2xl mb-4"></div>
+          <h3 className="text-center font-bold text-[#ffdd] text-3xl">Latte</h3>
+          <p className="font-serif text-lg text-center text-[#ffdd] px-2 mt-2">
+            Smooth and creamy blend for the latte lovers.
+          </p>
+        </li>
+
+        <li className="p-6 rounded-3xl shadow-xl hover:shadow-2xl transition">
+          <div className="w-full h-60 bg-[url('/image/javachipfrappe.png')] bg-center bg-cover rounded-t-2xl mb-4"></div>
+          <h3 className="text-center font-bold text-[#ffdd] text-3xl">Java Chip Frappe</h3>
+          <p className="font-serif text-lg text-center text-[#ffdd] px-2 mt-2">
+            Loaded with chocolate chips & rich coffee flavor.
+          </p>
+        </li>
+
+        <li className="p-6  rounded-3xl shadow-xl hover:shadow-2xl transition">
+          <div className="w-full h-60 bg-[url('/image/Americano.png')] bg-center bg-cover rounded-t-2xl mb-4"></div>
+          <h3 className="text-center font-bold text-[#ffdd] text-3xl">Americano</h3>
+          <p className="font-serif text-lg text-center text-[#ffdd] px-2 mt-2">
+            Classic strong black coffee for pure coffee lovers.
+          </p>
+        </li>
+
+        <li className="p-6  rounded-3xl shadow-xl hover:shadow-2xl transition">
+          <div className="w-full h-60 bg-[url('/image/Crossiant.png')] bg-center bg-cover rounded-t-2xl mb-4"></div>
+          <h3 className="text-center font-bold text-[#ffdd] text-3xl">Croissant</h3>
+          <p className="font-serif text-lg text-center text-[#ffdd] px-2 mt-2">
+            Freshly baked buttery & flaky croissant.
+          </p>
+        </li>
+
+        <li className="p-6  rounded-3xl shadow-xl hover:shadow-2xl transition">
+          <div className="w-full h-80 bg-[url('/image/blueberry.png')] bg-center bg-cover rounded-t-2xl mb-4"></div>
+          <h3 className="text-center font-bold text-[#ffdd] text-3xl">Blueberry Shake</h3>
+          <p className="font-serif text-lg text-center text-[#ffdd] px-2 mt-2">
+            Sweet, refreshing, and filled with blueberry goodness.
+          </p>
+        </li>
+
+      </ul>
+
+      <footer className="px-10 py-6 text-center border-t bg-stone-800 border-[#ffdd] text-gray-400">
         © {new Date().getFullYear()} Café Noire All Rights Reserved.
       </footer>
+    </div>
+  );
+};
 
-      </div>
-
-    
-  )
-}
-
-export default Items
+export default Items;
